@@ -6,7 +6,7 @@ server to provide Art gallery data to api query requests. As of writting this se
 
 The following table shows the api end-points and their purpose:
 | Route | Purpose |
-| --- | --- |
+| ---- | --- |
 | /api/paintings | Returns JSON for all paintings |
 | /api/painting/id | Returns JSON for the single painting whose id matches the provided id |
 | /api/painting/galley/id | Returns JSON for the painting whose gallery id matches the provided gallery id |
