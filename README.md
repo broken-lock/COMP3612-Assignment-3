@@ -5,14 +5,14 @@ A Node.js server using the Express module's route functionality. The core of the
 
 The following table shows the api end-points and their purpose:
 | Route | Purpose |
-| ----------------------------         | ----------------------------------------------------------- |
+| ---- | ---- |
 | `/api/paintings` | Returns JSON for all paintings |
 | `/api/painting/id` | Returns JSON for the single painting whose id matches the provided id |
 | `/api/painting/gallery/id` | Returns JSON for the painting whose gallery id matches the provided gallery id |
 | `/api/painting/artist/id` | Returns JSON for the paintings whose artist id matches the provided artist id |
 | `/api/painting/year/min/max` | Returns the paintings whose yearOfWork field is between the two supplied values. |
 | `/api/painting/title/text` | Returns JSON for the paintings whose title contains (somewhere) the provided text. This search is case sensitive. |
-| `/api/painting/color/name` | Returns JSON for the paintings that have a color that matches the provided hex value. Each painting has a dominantColors array with th six most common colors in the painting; each of these color values comes with a property named name that contains the name for that color. This search is case insensitive. |
+| `/api/painting/color/name` | Returns JSON for the paintings that have a color that matches the provided hex value. Each painting has a dominantColors <br> array with th six most common colors in the painting; each of these color values comes with a property named name that contains the name for that color. This search is case insensitive. |
 | `/api/artists` | Returns JSON for all artists. |
 | `/api/artists/country` | Returns JSON for all artists from the specified country. This search is case insensitive. |
 | `/api/galleries` | Returns JSON for all galleries. |
