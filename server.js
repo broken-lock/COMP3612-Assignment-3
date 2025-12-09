@@ -5,7 +5,7 @@ const galleriesRouter = require('./routes/galleriesRouter');
 const artistsRouter = require('./routes/artistsRouter');
 const paintingsRouter = require('./routes/paintingsRouter');
 const paintingRouter = require('./routes/paintingRouter');
-const { handle404Error } = require('./routes/error');
+const { handle404Error } = require('./scripts/error');
 
 app.use('/api/galleries', galleriesRouter);
 app.use('/api/artists', artistsRouter);

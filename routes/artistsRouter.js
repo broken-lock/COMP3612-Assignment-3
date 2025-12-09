@@ -4,7 +4,7 @@ const filePath = path.join(__dirname, '..', 'data', 'artists.json');
 const artistsData = provider.readJSONFrom(filePath);
 const express = require('express');
 const router = express.Router();
-const { handle404Error } = require('./error');
+const { handle404Error } = require('../scripts/error');
 
 router.get('/', (req, res) => {
     res.json(artistsData);
