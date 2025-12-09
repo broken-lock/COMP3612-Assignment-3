@@ -4,7 +4,7 @@
 A Node.js server using the Express module's route functionality. The core of the assignment is to set up a remote server to provide art gallery data to API query requests. As of writing, this server is hosted at render.com.
 
 The following table shows the api end-points and their purpose:
-| Route &nbsp &nbsp &nbsp | Purpose |
+| Route &nbsp; &nbsp; &nbsp; | Purpose |
 | ---- | ---- |
 | `/api/paintings` | Returns JSON for all paintings |
 | `/api/painting/id` | Returns JSON for the single painting whose id matches the provided id |
