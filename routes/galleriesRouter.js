@@ -4,24 +4,19 @@ const filePath = path.join(__dirname, '..', 'data', 'galleries.json');
 const galleriesData = provider.readJSONFrom(filePath);
 const express = require('express');
 const router = express.Router();
+const { handle404Error } = require('./error');
 
 router.get('/', (req, res) => {
     res.json(galleriesData);
 });
 
-router.get('/country', (req, res) => {
+router.get('/:country', (req, res) => {
     const country = req.params.country;
-    const matches = galleriesData.find(gallery => gallery.GalleyCountr.toLowerCase() == country.toLowerCase());
-
+    const matches = galleriesData.filter(gallery => gallery.GalleryCountry.toLowerCase() == country.toLowerCase());
     if (matches && matches.length > 0) {
         res.json(matches);
     } else {
-        res.status(404).json(
-            {   
-                success: false,
-                message: `Galleries: Could not find galleries with the specified country in: ${country}`,
-                query: req.query
-            });       
+        handle404Error(req, res, `Galleries: Could not find galleries with the specified country: ${country}`);
     }
 });
 

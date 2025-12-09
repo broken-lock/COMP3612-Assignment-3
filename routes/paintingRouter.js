@@ -4,105 +4,66 @@ const filePath = path.join(__dirname, '..', 'data', 'paintings-nested.json');
 const paintingsData = provider.readJSONFrom(filePath);
 const express = require('express');
 const router = express.Router();
+const { handle404Error } = require('./error');
 
 router.get('/:id', (req, res) => {
     const id = req.params.id;
-    
     const matches = paintingsData.find(painting => painting.paintingID == id);
-    console.log(paintingsData[1].paintingID === 578);
     if (matches) {
         res.json(matches);
     } else {
-        res.status(404).json(
-            {
-                success: false,
-                message: `Paintings: Could not the painting with the specified painting-id in: ${id}`,
-                query: req.query
-            });
+        handle404Error(req, res, `Paintings: Could not find the painting with the specified painting-id: ${id}`);
     }
 });
 
 router.get('/gallery/:id', (req, res) => {
     const id = req.params.id;
-    const matches =
-        paintingsData.filter(painting => painting.gallery.galleryID == id);
-
+    const matches = paintingsData.filter(painting => painting.gallery.galleryID == id);
     if (matches && matches.length > 0) {
         res.json(matches);
     } else {
-        res.status(404).json(
-            {
-                success: false,
-                message: `Paintings: Could not find paintings with the specified gallery-id in: ${id}`,
-                query: req.query
-            });
+        handle404Error(req, res, `Paintings: Could not find paintings with the specified gallery-id: ${id}`);
     }
 });
 
 router.get('/artist/:id', (req, res) => {
     const id = req.params.id;
     const matches = paintingsData.filter(painting => painting.artist.artistID == id);
-
     if (matches && matches.length > 0) {
         res.json(matches);
     } else {
-        res.status(404).json(
-            {
-                success: false,
-                message: `Paintings: Could not find paintings with the specified artist-id in: ${id}`,
-                query: req.query
-            });
+        handle404Error(req, res, `Paintings: Could not find paintings with the specified artist-id: ${id}`);
     }
 });
 
 router.get('/year/:min/:max', (req, res) => {
-    const minYear = req.params.min;
-    const maxYear = req.params.max;
-
+    const minYear = parseInt(req.params.min);
+    const maxYear = parseInt(req.params.max);
     const matches = paintingsData.filter(painting => painting.yearOfWork >= minYear && painting.yearOfWork <= maxYear);
-
     if (matches && matches.length > 0) {
         res.json(matches);
     } else {
-        res.status(404).json(
-            {
-                success: false,
-                message: `Paintings: Could not find paintings with the specified year ranges in: ${minYear}-${maxYear}`,
-                query: req.query
-            });
+        handle404Error(req, res, `Paintings: Could not find paintings with the specified year range: ${minYear}-${maxYear}`);
     }
 });
 
 router.get('/title/:text', (req, res) => {
     const text = req.params.text;
-    const matches = paintingsData.filter(painting => painting.title.toLowerCase().includes(text));
-
+    const matches = paintingsData.filter(painting => painting.title.toLowerCase().includes(text.toLowerCase()));
     if (matches && matches.length > 0) {
         res.json(matches);
     } else {
-        res.status(404).json(
-            {
-                success: false,
-                message: `Paintings: Could not find paintings with the specified title in: ${text}`,
-                query: req.query
-            });
+        handle404Error(req, res, `Paintings: Could not find paintings with the specified title: ${text}`);
     }
 });
 
 router.get('/color/:name', (req, res) => {
     const name = req.params.name;
-    console.log(paintingsData[0].details.annotation);
     const matches = paintingsData.filter(painting => painting.details.annotation.dominantColors.some(color => color.name.toLowerCase() == name.toLowerCase()));
-
     if (matches && matches.length > 0) {
         res.json(matches);
     } else {
-        res.status(404).json(
-            {
-                success: false,
-                message: `Paintings: Could not find paintings with the color name in: ${name}`,
-                query: req.query
-            });
+        handle404Error(req, res, `Paintings: Could not find paintings with the color name: ${name}`);
     }
 });
 
