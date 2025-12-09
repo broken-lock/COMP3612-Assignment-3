@@ -5,61 +5,19 @@ A node JS server using the express modules route functionality. The core of the 
 server to provide Art gallery data to api query requests. As of writting this server is hosted at render.com. 
 
 The following table shows the api end-points and their purpose:
-<table border="1" style="width: 40%;">
-<thead>
-<tr>
-    <th>Route</th>
-    <th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-    <tr>
-        <td>/api/paintings</td>
-        <td>Returns JSON for all paintings</td>
-    </tr>
-    <tr>
-        <td>/api/painting/id</td>
-        <td>Returns JSON for the single painting whose id matches the provided id</td>
-    </tr>
-    <tr>
-        <td>/api/painting/galley/id</td>
-        <td>Returns JSON for the painting whose gallery id matches the provided gallery id</td>
-    </tr>
-    <tr>
-        <td>/api/painting/artist/id</td>
-        <td>Returns JSON for the paintings whose artist id matches the provided artist id</td>
-    </tr>
-    <tr>
-        <td>/api/painting/year/min/max</td>
-        <td>Returns the paintings whose yearOfWork field is between the two supplied values.</td>
-    </tr>
-    <tr>
-        <td>/api/painting/title/text</td>
-        <td>Returns JSON for the paintings whose title contains (somewhere) the provided text. This search is case sensitive.</td>
-    </tr>
-    <tr>
-        <td>/api/painting/color/name</td>
-        <td>Returns JSON for the paintings that have a color that matches the provided hex value. Each painting has a dominantColors array with th six most common colors in the painting; each of these color values comes with a property named name that contains the name for that color. This search is case insensitive.</td>
-    </tr>
-    <tr>
-        <td>/api/artists</td>
-        <td>Returns JSON for all artists.</td>
-    </tr>
-    <tr>
-        <td>/api/artists/country</td>
-        <td>Returns JSON for all artists from the specified country. This should be case insensitive.</td>
-    </tr>
-    <tr>
-        <td>/api/galleries</td>
-        <td>Returns JSON for all galleries.</td>
-    </tr>
-    <tr>
-        <td>/api/galleries/country</td>
-        <td>Returns JSON for all galleries from the specified country. This should be case insesitive.</td>
-    </tr>
-</tbody>
-</table>
-
+| Route | Purpose |
+| --- | --- |
+| /api/paintings | Returns JSON for all paintings |
+| /api/painting/id | Returns JSON for the single painting whose id matches the provided id |
+| /api/painting/galley/id | Returns JSON for the painting whose gallery id matches the provided gallery id |
+| /api/painting/artist/id | Returns JSON for the paintings whose artist id matches the provided artist id |
+| /api/painting/year/min/max | Returns the paintings whose yearOfWork field is between the two supplied values. |
+| /api/painting/title/text | Returns JSON for the paintings whose title contains (somewhere) the provided text. This search is case sensitive. |
+| /api/painting/color/name | Returns JSON for the paintings that have a color that matches the provided hex value. Each painting has a dominantColors array with th six most common colors in the painting; each of these color values comes with a property named name that contains the name for that color. This search is case insensitive. |
+| /api/artists | Returns JSON for all artists. |
+| /api/artists/country | Returns JSON for all artists from the specified country. This should be case insensitive. |
+| /api/galleries | Returns JSON for all galleries. |
+| /api/galleries/country | Returns JSON for all galleries from the specified country. This should be case insesitive. |
 ## USAGE
 
 <a href="https://comp3612-assignment-3-5ixq.onrender.com/api/paintings">https://comp3612-assignment-3-5ixq.onrender.com/api/paintings</a><br>
