@@ -1,0 +1,17 @@
+{
+  "name": "a3",
+  "version": "1.0.0",
+  "description": "<table border=\"1\"> <thead> <tr>     <th>Route</th>     <th>Purpose</th> </tr> </thead> <tbody>     <tr>         <td>/api/paintings</td>         <td>Returns JSON for all paintings</td>     </tr>     <tr>         <td>/api/painting/id</td>         <td>Returns JSON for the single painting whose id matches the provided id</td>     </tr>     <tr>         <td>/api/painting/galley/id</td>         <td>Returns JSON for the painting whose gallery id matches the provided gallery id</td>     </tr>     <tr>         <td>/api/painting/artist/id</td>         <td>Returns JSON for the paintings whose artist id matches the provided artist id</td>     </tr>     <tr>         <td>/api/painting/year/min/max</td>         <td>Returns the paintings whose yearOfWork field is between the two supplied values.</td>     </tr>     <tr>         <td>/api/painting/title/text</td>         <td>Returns JSON for the paintings whose title contains (somewhere) the provided text. This search is case sensitive.</td>     </tr>     <tr>         <td>/api/painting/color/name</td>         <td>Returns JSON for the paintings that have a color that matches the provided hex value. Each painting has a dominantColors array with th six most common colors in the painting; each of these color values comes with a property named name that contains the name for that color. This search is case insensitive.</td>     </tr>     <tr>         <td>/api/artists</td>         <td>Returns JSON for all artists.</td>     </tr>     <tr>         <td>/api/artists/country</td>         <td>Returns JSON for all artists from the specified country. This should be case insensitive.</td>     </tr>     <tr>         <td>/api/galleries</td>         <td>Returns JSON for all galleries.</td>     </tr>     <tr>         <td>/api/galleries/country</td>         <td>Returns JSON for all galleries from the specified country. This should be case insesitive.</td>     </tr> </tbody> </table>",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
+  }
+}
