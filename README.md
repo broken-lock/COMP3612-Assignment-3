@@ -66,7 +66,7 @@ To make a query to the server, preface the api route with the server host, as fo
 
 ## TESTING
 
-/api/paintings
+<a href="https://comp3612-assignment-3-5ixq.onrender.com">/api/paintings</a>
 /api/painting/433
 /api/painting/43374534856
 /api/painting/gallery/7
