@@ -6,17 +6,17 @@ A Node.js server using the Express module's route functionality. The core of the
 The following table shows the api end-points and their purpose:
 | Route &nbsp; &nbsp; &nbsp; | Purpose |
 | ---- | ---- |
-| `/api/paintings`                        | Returns JSON for all paintings |
-| `/api/painting/id`                      | Returns JSON for the single painting whose id matches the provided id |
-| `/api/painting/gallery/id`              | Returns JSON for the painting whose gallery id matches the provided gallery id |
-| `/api/painting/artist/id`               | Returns JSON for the paintings whose artist id matches the provided artist id |
-| `/api/painting/year/min/max`            | Returns the paintings whose yearOfWork field is between the two supplied values. |
-| `/api/painting/title/text`              | Returns JSON for the paintings whose title contains the provided `text`. This search is case insensitive. |
-| `/api/painting/color/name`              | Returns JSON for the paintings that have a color that matches the provided hex value. Each painting has a dominantColors array with th six most common colors in the painting; each of these color values comes with a property named name that contains the name for that color. This search is case insensitive. |
-| `/api/artists`                          | Returns JSON for all artists. |
-| `/api/artists/country`                  | Returns JSON for all artists from the specified country. This search is case insensitive. |
-| `/api/galleries`                        | Returns JSON for all galleries. |
-| `/api/galleries/country`                | Returns JSON for all galleries from the specified country. This search is case insesitive. |
+| `/api/paintings` &nbsp; &nbsp; &nbsp; &nbsp; | Returns JSON for all paintings |
+| `/api/painting/id` &nbsp; &nbsp; &nbsp; &nbsp; | Returns JSON for the single painting whose id matches the provided id |
+| `/api/painting/gallery/id` &nbsp; &nbsp; &nbsp; &nbsp; | Returns JSON for the painting whose gallery id matches the provided gallery id |
+| `/api/painting/artist/id` &nbsp; &nbsp; &nbsp; &nbsp; | Returns JSON for the paintings whose artist id matches the provided artist id |
+| `/api/painting/year/min/max` &nbsp; &nbsp; &nbsp; &nbsp; | Returns the paintings whose yearOfWork field is between the two supplied values. |
+| `/api/painting/title/text` &nbsp; &nbsp; &nbsp; &nbsp; | Returns JSON for the paintings whose title contains the provided `text`. This search is case insensitive. |
+| `/api/painting/color/name` &nbsp; &nbsp; &nbsp; &nbsp; | Returns JSON for the paintings that have a color that matches the provided hex value. Each painting has a dominantColors array with th six most common colors in the painting; each of these color values comes with a property named name that contains the name for that color. This search is case insensitive. |
+| `/api/artists` &nbsp; &nbsp; &nbsp; &nbsp; | Returns JSON for all artists. |
+| `/api/artists/country` &nbsp; &nbsp; &nbsp; &nbsp; | Returns JSON for all artists from the specified country. This search is case insensitive. |
+| `/api/galleries` &nbsp; &nbsp; &nbsp; &nbsp; | Returns JSON for all galleries. |
+| `/api/galleries/country` &nbsp; &nbsp; &nbsp; &nbsp; | Returns JSON for all galleries from the specified country. This search is case insesitive. |
 ## USAGE
 
 <a href="https://comp3612-assignment-3-5ixq.onrender.com/api/paintings">https://comp3612-assignment-3-5ixq.onrender.com/api/paintings</a><br><br>
