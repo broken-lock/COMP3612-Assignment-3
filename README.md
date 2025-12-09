@@ -16,7 +16,7 @@ The following table shows the api end-points and their purpose:
 | `/api/artists` | Returns JSON for all artists. |
 | `/api/artists/country` | Returns JSON for all artists from the specified country. This search is case insensitive. |
 | `/api/galleries` | Returns JSON for all galleries. |
-| `/api/galleries/country` | Returns JSON for all galleries from the specified country. This search is case insesitive. |
+| `/api/galleries/country`                | Returns JSON for all galleries from the specified country. This search is case insesitive. |
 ## USAGE
 
 <a href="https://comp3612-assignment-3-5ixq.onrender.com/api/paintings">https://comp3612-assignment-3-5ixq.onrender.com/api/paintings</a><br><br>
