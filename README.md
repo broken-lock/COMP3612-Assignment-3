@@ -5,7 +5,7 @@ A Node.js server using the Express module's route functionality. The core of the
 
 The following table shows the api end-points and their purpose:
 |Route|Purpose|
-|:----|:----|
+|:-------|:----|
 | `/api/paintings` | Returns JSON for all paintings |
 | `/api/painting/id` | Returns JSON for the single painting whose id matches the provided id |
 | `/api/painting/gallery/id` | Returns JSON for the painting whose gallery id matches the provided gallery id |
